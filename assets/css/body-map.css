@@ -1,0 +1,114 @@
+.body-map-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.body-map-wrap {
+    position: relative;
+    width: 280px;
+    flex-shrink: 0;
+}
+
+.body-map-wrap svg {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.muscle-group {
+    cursor: pointer;
+    fill: #1e1e3f;
+    stroke: rgba(99,102,241,0.25);
+    stroke-width: 0.5;
+    transition: fill 0.2s, filter 0.2s;
+}
+
+.muscle-group:hover {
+    fill: rgba(99,102,241,0.45);
+    filter: drop-shadow(0 0 6px rgba(99,102,241,0.6));
+}
+
+.muscle-group.selected {
+    fill: rgba(99,102,241,0.65);
+    filter: drop-shadow(0 0 10px rgba(99,102,241,0.8));
+    stroke: var(--accent);
+    stroke-width: 1;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.muscle-group.heat-cold   { fill: #0d4f8c; }
+.muscle-group.heat-low    { fill: #1d9e75; }
+.muscle-group.heat-medium { fill: #ef9f27; }
+.muscle-group.heat-high   { fill: #e24b4a; }
+.muscle-group.heat-none   { fill: #1e1e3f; }
+
+.toggle-view-btn {
+    display: flex;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    width: fit-content;
+}
+
+.toggle-view-btn button {
+    padding: 0.4rem 1rem;
+    background: transparent;
+    border: none;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-family: inherit;
+}
+
+.toggle-view-btn button.active {
+    background: var(--accent);
+    color: #fff;
+}
+
+.gender-toggle {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.gender-toggle button {
+    flex: 1;
+    padding: 0.4rem;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
+    cursor: pointer;
+    transition: all var(--transition);
+    font-family: inherit;
+}
+
+.gender-toggle button.active {
+    background: rgba(99,102,241,0.18);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.imbalance-alert {
+    background: rgba(239,68,68,0.08);
+    border: 1px solid rgba(239,68,68,0.3);
+    border-radius: 10px;
+    padding: 0.9rem;
+    margin-top: 1rem;
+    font-size: 0.85rem;
+    color: var(--danger);
+}
+
+.imbalance-alert strong { display: block; margin-bottom: 0.3rem; }
+
+@media (max-width: 700px) {
+    .body-map-container { flex-direction: column; align-items: center; }
+    .body-map-wrap { width: 220px; }
+}
