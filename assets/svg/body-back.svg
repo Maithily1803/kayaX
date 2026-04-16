@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 420" style="width:100%;height:auto;">
+  <defs>
+    <style>
+      .muscle-group { cursor:pointer; fill:#1e1e3f; stroke:rgba(99,102,241,0.3); stroke-width:0.6; transition:fill 0.2s, filter 0.2s; }
+      .muscle-group:hover { fill:rgba(99,102,241,0.45); filter:drop-shadow(0 0 5px rgba(99,102,241,0.7)); }
+    </style>
+  </defs>
+
+  <!-- Head (back view) -->
+  <ellipse cx="100" cy="28" rx="22" ry="26" fill="#16162e" stroke="rgba(99,102,241,0.2)" stroke-width="0.5"/>
+
+  <!-- Neck -->
+  <rect x="91" y="52" width="18" height="14" rx="3" fill="#16162e" stroke="rgba(99,102,241,0.2)" stroke-width="0.5"/>
+
+  <!-- Trapezius -->
+  <path id="svg-trapezius" class="muscle-group"
+    d="M62 66 Q80 60 100 58 Q120 60 138 66 L140 94 Q120 100 100 102 Q80 100 60 94 Z"
+    data-muscle-name="Trapezius"/>
+
+  <!-- Left Rear Deltoid -->
+  <path id="svg-rear-deltoids" class="muscle-group"
+    d="M52 70 Q40 74 34 86 Q28 100 36 114 Q44 122 56 118 Q62 112 64 100 Q52 96 56 80 Z"
+    data-muscle-name="Rear Deltoids"/>
+
+  <!-- Right Rear Deltoid -->
+  <path class="muscle-group" style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"
+    d="M148 70 Q160 74 166 86 Q172 100 164 114 Q156 122 144 118 Q138 112 136 100 Q148 96 144 80 Z"
+    onclick="document.getElementById('svg-rear-deltoids').dispatchEvent(new Event('click',{bubbles:true}))"/>
+
+  <!-- Left Tricep -->
+  <path id="svg-triceps" class="muscle-group"
+    d="M34 116 Q26 126 24 142 Q22 158 30 168 Q38 174 48 168 Q56 160 56 144 Q54 128 44 118 Z"
+    data-muscle-name="Triceps"/>
+
+  <!-- Right Tricep -->
+  <path class="muscle-group" style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"
+    d="M166 116 Q174 126 176 142 Q178 158 170 168 Q162 174 152 168 Q144 160 144 144 Q146 128 156 118 Z"
+    onclick="document.getElementById('svg-triceps').dispatchEvent(new Event('click',{bubbles:true}))"/>
+
+  <!-- Left Lat -->
+  <path id="svg-lats" class="muscle-group"
+    d="M56 100 Q50 112 50 130 Q50 152 58 168 Q66 178 76 178 L76 128 Q66 118 60 106 Z"
+    data-muscle-name="Lats"/>
+
+  <!-- Right Lat -->
+  <path class="muscle-group" style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"
+    d="M144 100 Q150 112 150 130 Q150 152 142 168 Q134 178 124 178 L124 128 Q134 118 140 106 Z"
+    onclick="document.getElementById('svg-lats').dispatchEvent(new Event('click',{bubbles:true}))"/>
+
+  <!-- Lower Back -->
+  <path id="svg-lower-back" class="muscle-group"
+    d="M76 170 Q88 166 100 165 Q112 166 124 170 L126 200 Q112 206 100 207 Q88 206 74 200 Z"
+    data-muscle-name="Lower Back"/>
+
+  <!-- Left Forearm back -->
+  <path id="svg-forearms-back" class="muscle-group"
+    style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"
+    d="M24 170 Q18 180 17 196 Q16 212 22 222 Q28 228 36 224 Q44 218 46 204 Q48 188 42 174 Z"
+    data-muscle-name="Forearms"
+    onclick=""/>
+
+  <!-- Right Forearm back -->
+  <path class="muscle-group" style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"
+    d="M176 170 Q182 180 183 196 Q184 212 178 222 Q172 228 164 224 Q156 218 154 204 Q152 188 158 174 Z"/>
+
+  <!-- Left Glute -->
+  <path id="svg-glutes" class="muscle-group"
+    d="M62 200 Q56 206 54 222 Q52 240 58 256 Q66 268 80 268 Q92 266 94 252 Q96 236 90 218 Q82 204 70 200 Z"
+    data-muscle-name="Glutes"/>
+
+  <!-- Right Glute -->
+  <path class="muscle-group" style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"
+    d="M138 200 Q144 206 146 222 Q148 240 142 256 Q134 268 120 268 Q108 266 106 252 Q104 236 110 218 Q118 204 130 200 Z"
+    onclick="document.getElementById('svg-glutes').dispatchEvent(new Event('click',{bubbles:true}))"/>
+
+  <!-- Left Hamstring -->
+  <path id="svg-hamstrings" class="muscle-group"
+    d="M56 268 Q50 282 50 302 Q50 326 54 346 Q58 360 68 364 Q78 366 84 354 Q90 340 88 318 Q86 294 78 272 Q68 264 58 268 Z"
+    data-muscle-name="Hamstrings"/>
+
+  <!-- Right Hamstring -->
+  <path class="muscle-group" style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"
+    d="M144 268 Q150 282 150 302 Q150 326 146 346 Q142 360 132 364 Q122 366 116 354 Q110 340 112 318 Q114 294 122 272 Q132 264 142 268 Z"
+    onclick="document.getElementById('svg-hamstrings').dispatchEvent(new Event('click',{bubbles:true}))"/>
+
+  <!-- Left Calf -->
+  <path id="svg-calves" class="muscle-group"
+    d="M56 366 Q50 378 50 396 Q50 406 56 412 Q64 416 72 412 Q80 406 82 394 Q84 378 78 366 Q68 360 58 366 Z"
+    data-muscle-name="Calves"/>
+
+  <!-- Right Calf -->
+  <path class="muscle-group" style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"
+    d="M144 366 Q150 378 150 396 Q150 406 144 412 Q136 416 128 412 Q120 406 118 394 Q116 378 122 366 Q132 360 142 366 Z"
+    onclick="document.getElementById('svg-calves').dispatchEvent(new Event('click',{bubbles:true}))"/>
+
+  <!-- Hands -->
+  <ellipse cx="14" cy="236" rx="10" ry="14" fill="#16162e" stroke="rgba(99,102,241,0.2)" stroke-width="0.5"/>
+  <ellipse cx="186" cy="236" rx="10" ry="14" fill="#16162e" stroke="rgba(99,102,241,0.2)" stroke-width="0.5"/>
+</svg>

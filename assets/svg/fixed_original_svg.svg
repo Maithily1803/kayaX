@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 420" style="width:100%;height:auto;">
+  <defs>
+    <style>
+      .muscle-group { cursor:pointer; fill:#1e1e3f; stroke:rgba(99,102,241,0.3); stroke-width:0.6; transition:fill 0.2s, filter 0.2s; }
+      .muscle-group:hover { fill:rgba(99,102,241,0.45); filter:drop-shadow(0 0 5px rgba(99,102,241,0.7)); }
+    </style>
+  </defs>
+
+  <!-- Head -->
+  <ellipse cx="100" cy="28" rx="22" ry="26" fill="#16162e" stroke="rgba(99,102,241,0.2)" stroke-width="0.5"/>
+
+  <!-- Neck -->
+  <rect x="91" y="52" width="18" height="14" rx="3" fill="#16162e" stroke="rgba(99,102,241,0.2)" stroke-width="0.5"/>
+
+  <!-- Chest -->
+  <path id="svg-chest" class="muscle-group"
+    d="M62 76 Q70 70 100 70 Q130 70 138 76 L140 108 Q120 118 100 120 Q80 118 60 108 Z"
+    data-muscle-name="Chest"/>
+
+  <!-- Left Front Deltoid -->
+  <path id="svg-front-deltoids" class="muscle-group"
+    d="M55 70 Q44 72 38 84 Q34 96 40 108 Q46 116 58 114 Q64 110 68 102 Q56 98 58 82 Z"
+    data-muscle-name="Front Deltoids"/>
+
+  <!-- Right Front Deltoid -->
+  <path class="muscle-group"
+    d="M145 70 Q156 72 162 84 Q166 96 160 108 Q154 116 142 114 Q136 110 132 102 Q144 98 142 82 Z"
+    onclick="document.getElementById('svg-front-deltoids').dispatchEvent(new Event('click',{bubbles:true}))"
+    style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"/>
+
+  <!-- Left Bicep -->
+  <path id="svg-biceps" class="muscle-group"
+    d="M38 110 Q30 118 28 132 Q26 148 34 158 Q42 164 50 158 Q56 150 56 136 Q52 120 42 112 Z"
+    data-muscle-name="Biceps"/>
+
+  <!-- Right Bicep -->
+  <path class="muscle-group"
+    d="M162 110 Q170 118 172 132 Q174 148 166 158 Q158 164 150 158 Q144 150 144 136 Q148 120 158 112 Z"
+    onclick="document.getElementById('svg-biceps').dispatchEvent(new Event('click',{bubbles:true}))"
+    style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"/>
+
+  <!-- Left Forearm -->
+  <path id="svg-forearms" class="muscle-group"
+    d="M33 160 Q26 170 24 186 Q22 202 28 212 Q34 218 42 214 Q50 208 52 194 Q54 178 48 164 Z"
+    data-muscle-name="Forearms"/>
+
+  <!-- Right Forearm -->
+  <path class="muscle-group"
+    d="M167 160 Q174 170 176 186 Q178 202 172 212 Q166 218 158 214 Q150 208 148 194 Q146 178 152 164 Z"
+    onclick="document.getElementById('svg-forearms').dispatchEvent(new Event('click',{bubbles:true}))"
+    style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"/>
+
+  <!-- Abs -->
+  <path id="svg-abs" class="muscle-group"
+    d="M76 120 Q88 116 100 116 Q112 116 124 120 L126 178 Q112 184 100 185 Q88 184 74 178 Z"
+    data-muscle-name="Abs"/>
+
+  <!-- Left Oblique -->
+  <path id="svg-obliques" class="muscle-group"
+    d="M60 112 Q70 118 74 128 L74 178 Q66 182 58 176 Q50 168 50 150 Q50 132 58 118 Z"
+    data-muscle-name="Obliques"/>
+
+  <!-- Right Oblique -->
+  <path class="muscle-group"
+    d="M140 112 Q130 118 126 128 L126 178 Q134 182 142 176 Q150 168 150 150 Q150 132 142 118 Z"
+    onclick="document.getElementById('svg-obliques').dispatchEvent(new Event('click',{bubbles:true}))"
+    style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"/>
+
+  <!-- Left Quad -->
+  <path id="svg-quads" class="muscle-group"
+    d="M68 192 Q58 198 54 216 Q50 236 52 260 Q54 278 64 288 Q76 296 84 288 Q92 278 90 256 Q90 232 86 210 Q82 198 76 192 Z"
+    data-muscle-name="Quadriceps"/>
+
+  <!-- Right Quad -->
+  <path class="muscle-group"
+    d="M132 192 Q142 198 146 216 Q150 236 148 260 Q146 278 136 288 Q124 296 116 288 Q108 278 110 256 Q110 232 114 210 Q118 198 124 192 Z"
+    onclick="document.getElementById('svg-quads').dispatchEvent(new Event('click',{bubbles:true}))"
+    style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"/>
+
+  <!-- Left Adductor -->
+  <path id="svg-adductors" class="muscle-group"
+    d="M90 192 Q100 186 110 192 L112 250 Q100 258 88 250 Z"
+    data-muscle-name="Adductors"/>
+
+  <!-- Left Tibialis -->
+  <path id="svg-tibialis" class="muscle-group"
+    d="M56 292 Q50 306 50 326 Q50 348 56 362 Q62 372 70 372 Q78 370 82 360 Q88 344 86 322 Q84 302 76 292 Z"
+    data-muscle-name="Tibialis"/>
+
+  <!-- Right Tibialis -->
+  <path class="muscle-group"
+    d="M144 292 Q150 306 150 326 Q150 348 144 362 Q138 372 130 372 Q122 370 118 360 Q112 344 114 322 Q116 302 124 292 Z"
+    onclick="document.getElementById('svg-tibialis').dispatchEvent(new Event('click',{bubbles:true}))"
+    style="cursor:pointer;fill:#1e1e3f;stroke:rgba(99,102,241,0.3);stroke-width:0.6;"/>
+
+  <!-- Feet -->
+  <ellipse cx="66" cy="398" rx="18" ry="10" fill="#16162e"/>
+  <ellipse cx="134" cy="398" rx="18" ry="10" fill="#16162e"/>
+
+  <!-- Hands -->
+  <ellipse cx="24" cy="228" rx="10" ry="14" fill="#16162e"/>
+  <ellipse cx="176" cy="228" rx="10" ry="14" fill="#16162e"/>
+</svg>

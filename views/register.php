@@ -11,7 +11,7 @@ if (is_logged_in()) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register - FitMap</title>
+<title>Register - kayaX</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body style="display:flex;align-items:center;justify-content:center;min-height:100vh;padding:1.5rem;">

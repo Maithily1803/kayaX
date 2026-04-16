@@ -36,7 +36,7 @@ if ($user['weight_kg'] && $user['height_cm']) {
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Profile - FitMap</title>
+<title>Profile - kayaX</title>
 <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>

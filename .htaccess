@@ -1,0 +1,33 @@
+# Disable directory browsing
+Options -Indexes
+
+# Enable URL rewriting
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /kayaX/
+</IfModule>
+
+# Protect sensitive files
+<FilesMatch "\.(json|sql|md|log|env|ini)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Protect config file
+<Files "config.php">
+    Order allow,deny
+    Deny from all
+</Files>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-XSS-Protection "1; mode=block"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# PHP security settings
+php_flag display_errors Off
+php_value session.cookie_httponly 1
+php_value session.use_strict_mode 1
